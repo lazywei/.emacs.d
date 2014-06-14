@@ -26,7 +26,7 @@
    (:name magit; git meet emacs, and a binding
 	  :after (progn
 		   (global-set-key (kbd "C-x C-z") 'magit-status)))
-   
+
    (:name goto-last-change; move pointer back to last change
 	  :after (progn
 		   ;; when using AZERTY keyboard, consider C-x C-_
@@ -48,3 +48,6 @@
         packages-utilities
         packages-theme
          (loop for src in el-get-sources collect (el-get-source-name src)))
+
+(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+(require 'init-ido)
