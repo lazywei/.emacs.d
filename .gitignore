@@ -14,3 +14,6 @@ site-lisp/adventur-mode
 .cask
 /url/
 /var/
+
+el-get/
+.smex-items
