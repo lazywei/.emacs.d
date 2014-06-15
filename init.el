@@ -34,6 +34,7 @@
 
 (setq packages-utilities
       '(
+	evil
 	full-ack
         ))
 
@@ -41,13 +42,24 @@
       '(
         color-theme
         color-theme-solarized
+	powerline
         ))
+
+(setq packages-other
+      '(
+	dired+
+	))
 
 ;; install new packages and init already installed packages
 (el-get 'sync
         packages-utilities
         packages-theme
+	packages-other
          (loop for src in el-get-sources collect (el-get-source-name src)))
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
 (require 'init-ido)
+(require 'init-dired)
+(require 'init-misc)
+
+(evil-mode 1)
