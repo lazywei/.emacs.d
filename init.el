@@ -32,10 +32,16 @@
 		   ;; when using AZERTY keyboard, consider C-x C-_
 		   (global-set-key (kbd "C-x C-/") 'goto-last-change)))))
 
-(setq packages-utilities
+(setq packages-evil
       '(
 	evil
+	evil-leader
+	))
+
+(setq packages-utilities
+      '(
 	full-ack
+	key-chord
         ))
 
 (setq packages-theme
@@ -52,14 +58,16 @@
 
 ;; install new packages and init already installed packages
 (el-get 'sync
+        packages-evil
         packages-utilities
         packages-theme
 	packages-other
          (loop for src in el-get-sources collect (el-get-source-name src)))
 
 (add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+
+(require 'init-key-chord)
 (require 'init-ido)
 (require 'init-dired)
+(require 'init-evil)
 (require 'init-misc)
-
-(evil-mode 1)
