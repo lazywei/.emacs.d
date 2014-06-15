@@ -10,6 +10,7 @@
 (evil-leader/set-key
   "." 'evil-normal-state
   "k" 'kill-this-buffer
+  "w" 'save-buffer
   "e" 'find-file
   "b" 'switch-to-buffer)
 
