@@ -1,6 +1,11 @@
 ;;; init-ido.el --- The configuration for IDO
 
 (ido-mode t)
+(ido-everywhere t)
+(flx-ido-mode t)
+;;; disable ido faces to see flx highlights.
+(setq ido-use-faces nil)
+
 (setq ido-enable-prefix nil
       ido-enable-flex-matching t
       ido-create-new-buffer 'always
