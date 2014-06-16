@@ -35,6 +35,10 @@
    (:name flx; fuzzy matching
    	  :after (progn
    		   (require 'flx-ido)))
+   (:name projectile; project interaction
+	  :after (progn
+		   (require 'projectile)
+		   (projectile-global-mode)))
 ))
 
 (setq packages-evil
