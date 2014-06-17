@@ -35,16 +35,25 @@
    (:name flx; fuzzy matching
    	  :after (progn
    		   (require 'flx-ido)))
+
    (:name projectile; project interaction
 	  :after (progn
 		   (require 'projectile)
 		   (projectile-global-mode)))
+
+   (:name smartparens
+	  :after (progn
+		   (require 'smartparens-config)
+		   (smartparens-global-mode)
+		   (show-smartparens-global-mode)
+		   (setq sp-show-pair-delay 0)))
 ))
 
 (setq packages-evil
       '(
 	evil
 	evil-leader
+	evil-surround
 	))
 
 (setq packages-utilities
@@ -63,6 +72,7 @@
 (setq packages-other
       '(
 	dired+
+	ido-vertical-mode
 	))
 
 ;; install new packages and init already installed packages

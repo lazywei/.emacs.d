@@ -6,6 +6,8 @@
 ;;; disable ido faces to see flx highlights.
 (setq ido-use-faces nil)
 
+(ido-vertical-mode t)
+
 (setq ido-enable-prefix nil
       ido-enable-flex-matching t
       ido-create-new-buffer 'always

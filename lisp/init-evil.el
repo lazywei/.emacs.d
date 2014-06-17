@@ -11,8 +11,13 @@
   "." 'evil-normal-state
   "k" 'kill-this-buffer
   "w" 'save-buffer
-  "e" 'find-file
-  "b" 'switch-to-buffer)
+  "b" 'switch-to-buffer
+  "x" 'smex
+  
+  ;;; Projectile related
+  "f" 'projectile-find-file
+  "d" 'projectile-find-dir
+)
 
 (key-chord-define evil-normal-state-map ",." 'evil-force-normal-state)
 (key-chord-define evil-visual-state-map ",." 'evil-change-to-previous-state)
