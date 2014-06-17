@@ -17,6 +17,9 @@
   ;;; Projectile related
   "f" 'projectile-find-file
   "d" 'projectile-find-dir
+  
+  ;;; Magit related
+  "mg" 'magit-status
 )
 
 (key-chord-define evil-normal-state-map ",." 'evil-force-normal-state)

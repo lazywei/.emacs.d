@@ -56,10 +56,17 @@
 	evil-surround
 	))
 
+(setq packages-auto-complete
+      '(
+	auto-complete
+	))
+
 (setq packages-utilities
       '(
 	full-ack
 	key-chord
+	flymake
+	flymake-ruby
         ))
 
 (setq packages-theme
@@ -78,6 +85,7 @@
 ;; install new packages and init already installed packages
 (el-get 'sync
         packages-evil
+        packages-auto-complete
         packages-utilities
         packages-theme
 	packages-other
